@@ -22,6 +22,7 @@ for filename in f:
     [name, type] = filename.split('.')
     if type == 'atlas':
         print '\n'
+
         atlas = open(dirName + '/' + filename, 'r')
         data = json.loads(atlas.read())
         image_name = 'atlas/' + data['meta']['image']
@@ -29,14 +30,14 @@ for filename in f:
         print image_name
         print path
 
-        # 删除文件夹
+        # delete path
         if os.path.exists(path):
             shutil.rmtree(path)
 
-        # 创建文件夹
+        # create path
         os.makedirs(path)
 
-        # 加载图片
+        # splice image
         im = Image.open(image_name)
         frames = data['frames']
 
