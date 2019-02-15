@@ -1,10 +1,11 @@
-# LayaAri游戏图集还原脚本
+# altas 游戏图集还原脚本
 
 ### 运行环境
 - Python 2.7
 - PIL
 
 ### 使用方法
+
 ```
 # python main.py '还原文件文件夹'
 python main.py ./atlas
